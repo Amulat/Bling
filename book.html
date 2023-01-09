@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Bling</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Courgette&family=Jost:wght@700&family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6f9718341a.js" crossorigin="anonymous"></script>
+        <!-- Navbar Section -->
+        <nav class="navbar">
+            <a href="/" class="navbar__logo"><img class="logo-img" src="images/bling-bitmap.png" alt=""></a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span><span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="navbar__menu">
+                <a href="/" class="navbar__link">Home</a>
+                <a href="/rooms.html" class="navbar__link">Rooms</a>
+                <a href="/book.html" class="navbar__link">Book Online</a>
+                <a href="/contact.html" class="navbar__link">Contact</a>
+                <a href="/about.html" class="navbar__link">About</a>
+                <a href="" class="navbar__link"></a>
+                <a href="" class="navbar__link"></a>
+                <a href="" class="navbar__link"></a>
+            </div>
+        </nav>
+        <!-- Booking Section -->
+        <div class="booking">
+            <div class="booking-container" onsubmit="calculateTotalCost(); return false;" id="myForm">
+                <div class="booking__header">
+                    <h5>Select your stay</h5>
+                    <a href="rooms.html" class="booking__link">Click here for package descriptions</a>
+                </div>
+                <form action="" class="form">
+                    <!-- <div class="input-group">
+                        <label for="destination" class="input-label">Destination</label>
+                        <input type="text" class="input" id="destination">
+                    </div> -->
+                    <div class="input-group">
+                        <label for="Room-Type" class="input-label">Room Type</label>
+                        <select class="options"  id="Room-Type" onchange="updatePrice()" required>
+                            <option value=""></option>
+                            <option value="Standard">Standard</option>
+                            <option value="Full">Full</option>
+                            <option value="Deluxe">Premier</option>
+                        </select>
+                        <p id="price" class="room-price"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="adults" class="input-label">Adults</label>
+                            <select class="options"  id="adults" required>
+                            <option value=""></option>
+                            <option value="0">1</option>
+                            <option value="0">2</option>
+                            <option value="0">3</option>
+                            <option value="0">4</option>
+                            <option value="0">5</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="children" class="input-label">Children</label>
+                        <select class="options"  id="children" required>
+                            <option value=""></option>
+                            <option value="0">0</option>
+                            <option value="0">1</option>
+                            <option value="0">2</option>
+                            <option value="0">3</option>
+                            <option value="0">4</option>
+                            <option value="0">5</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="checkIn" class="input-label">Check in date</label>
+                        <input type="date" class="input" id="checkIn" name="checkIn" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="checkOut" class="input-label">Check out date</label>
+                        <input type="date" class="input" id="checkOut" name="checkOut" required>
+                    </div>
+                    <button type="submit" class="btn form-btn btn-purple">Submit</button>
+                    <div class="formbtn">
+                        <a href="/book.html" type="button" class="continue-btn button" id="temp-btn" style="display: inline;">Continue to cart <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <hr/>
+                    <p class="total-cost">Total cost: <span id="total-cost" class="total_cost cost-cost"></span>
+                        <p class="total-desc">Excluding Taxes & Fees</p>
+                        <div class="formbtn">
+                            <!-- <a href="/book.html" type="button" class="continue-btn button" id="temp-btn" style="display: inline;">Continue to cart <i class="fa-solid fa-arrow-right"></i></a> -->
+                            
+                        </div>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__desc">
+                    <img class="seal invert" src="images/bling-seal.png" alt="">
+                    <h1>Hotel Bling</h1>
+                    <p>Luxury Hotel brand</p>
+                    <p class="id"><i class="fa-solid fa-phone"></i> 708-893-7368</p>
+                    <p class="id"><i class="fa-solid fa-envelope"></i> hotelbling@hotel-bling.com</p>
+                </div>
+                <div class="footer__links">
+                    <h2 class="footer__title">Site links</h2>
+                    <a href="contact.html" class="footer__link">Contact</a>
+                    <a href="contact.html" class="footer__link">Support</a>
+                    <a href="about.html" class="footer__link">About us</a>
+                </div>
+            </div>
+            <div class="footer__wrapper">
+                <div class="footer__links">
+                    <h2 class="footer__title">Resources</h2>
+                    <a class="footer__link" href="/">Programs</a>
+                    <a class="footer__link" href="/">Events</a>
+                    <a class="footer__link" href="/">Locations</a>
+                    <a class="footer__link" href="/">FAQ</a>
+                </div>
+            <div class="footer__wrapper">
+                <div class="footer__links">
+                    <h2 class="footer__title">Social Media</h2>
+                    <a class="footer__link" href="/"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a class="footer__link" href="/"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    <a class="footer__link" href="/"><i class="fa-brands fa-youtube"></i> Youtube</a>
+                    <a class="footer__link" href="/"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
