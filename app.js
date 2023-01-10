@@ -29,7 +29,7 @@ function updatePrice() {
     } else if (select.value == "0") {
         price.innerHTML = "";
     }
-  }
+}
   
 
 //Booking form
@@ -50,6 +50,14 @@ function calculateTotalCost() {
     const totalCost = cost * nights; //nights;  // Calculate the total cost
     
     document.getElementById("total-cost").innerHTML = `$${totalCost}`;
-  }
+}
 
+//Animations
+gsap.registerPlugin(ScrollTrigger)
 
+gsap.from('.animate-hero', {
+  duration: 10,
+  opacity: 0,
+  y: -150,
+  stagger: 0.3
+})

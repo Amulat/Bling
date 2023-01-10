@@ -5,7 +5,7 @@
     --offwhite: #cfcfcf;
     --blue: #8f96ff; 
     --yellow: #fff6ca; 
-    --gradient: linear-gradient(to right, #ce951a, #7531c2);
+    --gradient: linear-gradient(to right, rgb(199, 129, 0), rgb(38, 0, 128));
     --revs-gradient: linear-gradient(to right, #381980, #E48A3B);
     --a: linear-gradient(to bottom, rgb(94, 9, 3), rgb(10, 57, 85));
     --tsp-a: linear-gradient(to bottom, rgb(94, 9, 3, 0.5), rgb(10, 57, 85 0.5));
@@ -43,10 +43,6 @@ body {
 
 .invert {
     filter: invert(100%);
-}
-
-.bold {
-    font-weight: ;
 }
 
 /*  */
@@ -493,6 +489,7 @@ body {
     margin-top: 10%;
     margin-bottom: 10%;
     box-shadow: 20px 20px 20px 20px rgba(0,0,0,.3);
+    border-radius: 10px;
 }
 
 .input-group {
@@ -631,8 +628,8 @@ hr {
 /* Room Descriptions */
 
 .roo {
-    background: linear-gradient(to top, rgba(77, 0, 170, 0.514), rgba(165, 146, 41, 0.349));
-    color: var(--white);
+    background: #f2f2f2;
+    color: var(--black);
     padding: 6rem calc((100vw - 1100px)/2);
     text-align: center;
 }
