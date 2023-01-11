@@ -61,3 +61,44 @@ gsap.from('.animate-hero', {
   y: -150,
   stagger: 0.3
 })
+
+gsap.from('.animate-services', {
+  scrollTrigger: '.animate-services',
+  duration: 0.5,
+  opacity: 1,
+  x: -150,
+  stagger: 0.12
+})
+
+gsap.from('.animate-img', {
+  scrollTrigger: '.animate-services',
+  duration: 1.2,
+  opacity: 0,
+  x: -200,
+})
+
+gsap.from('.animate-room', {
+  scrollTrigger: '.animate-room',
+  duration: 1,
+  opacity: 0,
+  y: -150,
+  stagger: 0.3,
+  delay: 0.5
+})
+
+gsap.from('.animate-card', {
+  scrollTrigger: '.animate-room',
+  duration: 1,
+  opacity: 0,
+  y: -150,
+  stagger: 0.5,
+  delay: 0.2
+})
+
+gsap.from('.animate-amenities', {
+  scrollTrigger: '.animate-amenities',
+  duration: 1.5,
+  opacity: 1,
+  x: 150,
+  stagger: 0.48
+})
