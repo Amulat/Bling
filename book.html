@@ -19,28 +19,28 @@
             <div class="navbar__menu">
                 <a href="/bling/" class="navbar__link">Home</a>
                 <a href="/bling/rooms.html" class="navbar__link">Rooms</a>
-                <a href="/bling/book.html" class="navbar__link">Book Online</a>
+                <a href="/bling/book.html" class="navbar__link">Booking</a>
                 <a href="/bling/contact.html" class="navbar__link">Contact</a>
                 <a href="/bling/amenities.html" class="navbar__link">Amenities</a>
-                <a href="" class="navbar__link"></a>
+                <a href="/bling/cart.html" class="navbar__link"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="" class="navbar__link"></a>
                 <a href="" class="navbar__link"></a>
             </div>
         </nav>
         <!-- Booking Section -->
         <div class="booking">
-            <div class="booking-container" onsubmit="calculateTotalCost(); return false;" id="myForm">
+            <div class="booking-container" onsubmit="calculateTotalCost(); return false;" onsubmit="showButton()" id="myForm">
                 <div class="booking__header">
                     <h5>Select your stay</h5>
                     <a href="rooms.html" class="booking__link">Click here for package descriptions</a>
                 </div>
                 <form action="" class="form">
-                    <!-- <div class="input-group">
-                        <label for="destination" class="input-label">Destination</label>
-                        <input type="text" class="input" id="destination">
-                    </div> -->
                     <div class="input-group">
-                        <label for="Room-Type" class="input-label">Package</label>
+                        <label for="destination" class="input-label">Location</label>
+                        <input type="text" class="input" id="destination">
+                    </div>
+                    <div class="input-group">
+                        <label for="Room-Type" class="input-label">Package *</label>
                         <select class="options"  id="Room-Type" onchange="updatePrice()" required>
                             <option value=""></option>
                             <option value="Standard">Standard</option>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="input-group">
                         <label for="adults" class="input-label">Adults</label>
-                            <select class="options"  id="adults" required>
+                            <select class="options"  id="adults">
                             <option value=""></option>
                             <option value="0">1</option>
                             <option value="0">2</option>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="input-group">
                         <label for="children" class="input-label">Children</label>
-                        <select class="options"  id="children" required>
+                        <select class="options"  id="children">
                             <option value=""></option>
                             <option value="0">0</option>
                             <option value="0">1</option>
@@ -73,23 +73,20 @@
                         </select>
                     </div>
                     <div class="input-group">
-                        <label for="checkIn" class="input-label">Check in date</label>
+                        <label for="checkIn" class="input-label">Check in date *</label>
                         <input type="date" class="input" id="checkIn" name="checkIn" required>
                     </div>
                     <div class="input-group">
-                        <label for="checkOut" class="input-label">Check out date</label>
+                        <label for="checkOut" class="input-label">Check out date *</label>
                         <input type="date" class="input" id="checkOut" name="checkOut" required>
                     </div>
                     <button type="submit" class="btn form-btn btn-purple">Submit</button>
                     <div class="formbtn">
-                        <a href="/book.html" type="button" class="continue-btn button" id="temp-btn" style="display: inline;">Continue to cart <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="/cart.html" type="button" class="continue-btn button" id="temp-btn" style="display: inline;">Continue <i class="fa-solid fa-arrow-right"></i> <i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                     <hr/>
-                    <p class="total-cost">Total cost: <span id="total-cost" class="total_cost cost-cost"></span>
-                        <p class="total-desc">Excluding Taxes & Fees</p>
-                        <div class="formbtn">
-                            <!-- <a href="/book.html" type="button" class="continue-btn button" id="temp-btn" style="display: inline;">Continue to cart <i class="fa-solid fa-arrow-right"></i></a> -->
-                            
+                    <p class="total-cost">Total cost: <span id="total-cost" class="total_cost cost-cost"><p class="total-desc">Excluding Taxes & Fees</p></span>
+                        <div class="formbtn">                  
                         </div>
                     </p>
                 </form>
