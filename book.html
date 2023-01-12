@@ -22,7 +22,7 @@
             <div class="navbar__menu">
                 <a href="/bling/" class="navbar__link">Home</a>
                 <a href="/bling/rooms.html" class="navbar__link">Rooms</a>
-                <a href="/bling/book.html" class="navbar__link">Booking</a>
+                <a href="/bling/book.html" class="navbar__link" style="text-decoration: overline;">Booking</a>
                 <a href="/bling/contact.html" class="navbar__link">Contact</a>
                 <a href="/bling/amenities.html" class="navbar__link">Amenities</a>
                 <a href="/bling/cart.html" class="navbar__link"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -32,10 +32,10 @@
         </nav>
         <!-- Booking Section -->
         <div class="booking">
-            <div class="booking-container" onsubmit="calculateTotalCost(); return false;" onsubmit="showButton()" id="myForm">
+            <div class="booking-container" onsubmit="calculateTotalCost(); return false;" onsubmit="setCookie()" id="myForm">
                 <div class="booking__header">
-                    <h5>Select your stay</h5>
-                    <a href="rooms.html" class="booking__link">Click here for package descriptions</a>
+                    <h5 class="title">Select your stay</h5>
+                    <a href="rooms.html" class="booking__link subheading">Click here for package descriptions</a>
                 </div>
                 <form action="" class="form">
                     <div class="input-group">
@@ -132,6 +132,7 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>

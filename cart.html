@@ -26,7 +26,7 @@
                 <a href="/bling/book.html" class="navbar__link">Booking</a>
                 <a href="/bling/contact.html" class="navbar__link">Contact</a>
                 <a href="/bling/amenities.html" class="navbar__link">Amenities</a>
-                <a href="/bling/cart.html" class="navbar__link"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="/bling/cart.html" class="navbar__link" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="" class="navbar__link"></a>
                 <a href="" class="navbar__link"></a>
             </div>
@@ -38,8 +38,8 @@
               <main>
                 <div class="py-5 text-center">
                   <img class="d-block mx-auto mb-4" src="images/bling-seal.png" alt="" width="100" height="100">
-                  <h2>Checkout form</h2>
-                  <p class="lead">Complete the form to book your stay at Hotel Bling.</p>
+                  <h2 class="title">Checkout form</h2>
+                  <p class="lead subheading">Complete the form to book your stay at Hotel Bling.</p>
                 </div>
             
                 <div class="row g-5">
@@ -54,7 +54,7 @@
                           <h6 class="my-0">Booked stay</h6>
                           <small class="text-muted">Room reservation</small>
                         </div>
-                        <span class="text-muted">$180</span>
+                        <span class="text-muted"><p id="price_price">$180</p></span>
                       </li>
                       <!-- <li class="list-group-item d-flex justify-content-between lh-sm">
                         <div>
@@ -79,7 +79,7 @@
                       </li> -->
                       <li class="list-group-item d-flex justify-content-between">
                         <span>Total (USD)</span>
-                        <strong>$180</strong>
+                        <strong id="price_price">$180</strong>
                       </li>
                     </ul>
             
@@ -125,7 +125,7 @@
                           <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
                           <input type="email" class="form-control" id="email" placeholder="you@example.com">
                           <div class="invalid-feedback">
-                            Please enter a valid email address for shipping updates.
+                            Please enter a valid email address for validation.
                           </div>
                         </div>
             
@@ -303,5 +303,5 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <script src="app.js"></script>
-    </body>
+    </body onload="DisplayPrice()">
 </html>

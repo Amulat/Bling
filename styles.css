@@ -10,6 +10,7 @@
     --a: linear-gradient(to bottom, rgb(94, 9, 3), rgb(10, 57, 85));
     --tsp-a: linear-gradient(to bottom, rgb(94, 9, 3, 0.5), rgb(10, 57, 85 0.5));
     --revs-a: linear-gradient(to bottom, rgb(10, 57, 85), rgb(94, 9, 3));
+    --purpl: linear-gradient(to bottom, rgb(25, 0, 255), rgb(0, 0, 0));
 }
 
 *{
@@ -28,11 +29,11 @@
 }
 
 body {
-    background-color: var(--white);
+    background-color: var(--purpl);
 }
 
 .navbar{
-    background: rgb(0, 0, 0);
+    background: var(--purpl);
     height: 80px;
     padding: 0.5rem calc((100vw - 1200px)/2);
     display: flex;
@@ -65,7 +66,7 @@ body {
 
 
 .navbar__link:hover {
-    color: rgb(255, 255, 255);
+    color: yellow;
 }
 
 @media screen and (max-width: 768px) {
@@ -139,6 +140,7 @@ body {
 
 .title {
     font-size: 3rem;
+    font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-top: 2rem;
@@ -186,6 +188,7 @@ body {
     font-size: clamp(3rem, 8vw, 7rem);
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+    font-family: 'Roboto';
 }
 
 .hero__content p {
@@ -194,7 +197,7 @@ body {
     font-size: 2.4rem;
     letter-spacing: 3px;
     text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lora';
 }
 
 .button {
@@ -203,7 +206,7 @@ body {
     color: var(--white);
     font-size: 1rem;
     cursor: pointer;
-    outline: auto;
+    outline: invert;
     transition: 0.3s ease;
     text-decoration: none;
     border-radius: 4px;
@@ -219,7 +222,7 @@ body {
 /* Services Section */
 .services {
     padding: 8rem calc((100vw - 1200px)/2);
-    background: linear-gradient(rgba(11, 2, 24, 0.986), rgba(12, 0, 29, 0.781));
+    background: var(--purpl);
 }
 
 .services__container { 
@@ -276,7 +279,7 @@ body {
     padding: 6rem calc((100vw - 1100px)/2);
     display: grid;
     color: var(--offwhite);
-    background: var(--black);
+    background: var(--purpl);
     font-family: 'Lora';
 }
 
@@ -519,7 +522,7 @@ body {
     letter-spacing: 2px;
     color: #a5a5a5;
     font-weight: bold;
-    box-shadow: 3px 3px 3px 3px rgba(0,0,0,.3);
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,.3);
     text-indent: 5px;
 }
 
@@ -539,14 +542,14 @@ body {
 }
 
 .btn-purple {
-    background-color: rgb(30, 0, 63);
-    outline: auto;
+    background-color: rgb(100, 70, 255);
+    outline: invert;
+    color: black;
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,.3);
 }
 
 .btn-purple:hover {
-    background-color: rgb(255, 187, 0);
-    color: #000;
+    color: rgb(255, 238, 0);
 }
 
 hr {
