@@ -30,7 +30,8 @@ function updatePrice() {
         price.innerHTML = "";
     }
 }
-  
+
+
 
 //Booking form
 function calculateTotalCost() {
@@ -48,9 +49,34 @@ function calculateTotalCost() {
     const diff = Math.abs(checkInDate.getTime() - checkOutDate.getTime());  // Calculate the difference in milliseconds
     const nights = Math.ceil(diff / (1000 * 60 * 60 * 24));  // Convert the difference to days and round up
     const totalCost = cost * nights; //nights;  // Calculate the total cost
-    
+
+    window.costtotal = totalCost
+
     document.getElementById("total-cost").innerHTML = `$${totalCost}`;
 }
+
+//cookies
+
+const form = document.getElementById("myForm");
+form.addEventListener("submit", function (e) {
+  Cookies.set('name', costtotal);
+});
+
+function DisplayPrice() {
+  var price = Cookies.get('name')
+  document. querySelector("price_price").innerHTML = `$${price}`;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 //Animations
 gsap.registerPlugin(ScrollTrigger)
