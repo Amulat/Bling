@@ -67,17 +67,6 @@ function DisplayPrice() {
   document. querySelector("price_price").innerHTML = `$${price}`;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 //Animations
 gsap.registerPlugin(ScrollTrigger)
 

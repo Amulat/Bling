@@ -29,7 +29,7 @@
 }
 
 body {
-    background-color: var(--purpl);
+    background-color: rgb(25, 0, 70);
 }
 
 .navbar{
@@ -165,12 +165,24 @@ body {
     text-align: center;
 }
 
+.blur {
+  width: 100%;
+  backdrop-filter: blur(5px); /* blur effect to the backdrop */
+  height: 100vh;
+}
+
 /* Hero Section */
+
+.contain {
+   backdrop-filter: blur(8px);
+}
+
 .hero {
     background: linear-gradient(to right, rgba(77, 0, 170, 0.658), rgba(233, 202, 24, 0.774)), url('./images/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg');
     height: 100vh;
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     padding: 0.5rem calc((100vw - 1200px)/2);
     display: flex;
     justify-content: flex-start;
@@ -179,9 +191,11 @@ body {
 
 .hero__content {
     color: #fff;
-    padding: 3rem 1rem;
+    padding: 5rem 5rem;
+    border-radius: 2rem;
     line-height: 1;
-    text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);;
+    display: inline;
 }
 
 .hero__content h1 {
@@ -212,11 +226,19 @@ body {
     border-radius: 4px;
     box-shadow: 5px 5px 10px 2px rgba(0,0,0,.3);
     text-align: center;
+    font-family: 'lora';
 }
 
 .button:hover {
-    background: rgb(55, 0, 255, 0.8);
+    background: rgba(20, 0, 90, 0.6);
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .hero__content h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
 }
 
 /* Services Section */
@@ -231,6 +253,7 @@ body {
     padding: 1rem;
     column-gap: 4rem; 
     border: 10px solid #fff;
+    border-radius: 8px;
     background: linear-gradient(rgba(255, 255, 255, 0.884), rgba(255, 244, 196, 0.836));
     box-shadow: 20px 20px 20px 5px rgba(0,0,0,.3);
 }
@@ -238,7 +261,7 @@ body {
 .services__img {
     width: 100%;
     height: 100%;
-    box-shadow: 0px 5px 5px 5px rgba(0,0,0,.3);
+    border-radius: 8px;
 }
 
 .topline {
@@ -489,7 +512,7 @@ body {
 
   .booking-container {
     padding: 10%;
-    background: rgb(62, 107, 255);
+    background: rgba(120, 62, 255, 0.95);
     margin-top: 10%;
     margin-bottom: 10%;
     box-shadow: 20px 20px 20px 20px rgba(0,0,0,.3);
@@ -509,7 +532,7 @@ body {
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .input, 
@@ -542,14 +565,15 @@ body {
 }
 
 .btn-purple {
-    background-color: rgb(100, 70, 255);
-    outline: invert;
+    background-color: rgb(255, 255, 255, 0.5);
     color: black;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.3);
+    box-shadow: 1x 1px 1px 1px rgba(0,0,0,.3);
+    outline: auto;
 }
 
 .btn-purple:hover {
     color: rgb(255, 238, 0);
+    background: rgb(25, 0, 80, 0.8);
 }
 
 hr {
@@ -678,6 +702,7 @@ hr {
     justify-content: space-between;
     text-align: left;
     line-height: 150%;
+    outline: auto;
 }
 
 .room__img{
@@ -738,12 +763,13 @@ hr {
 }
 
 .about {
-    background: linear-gradient(to right, rgba(77, 0, 170, 0.658), rgba(233, 202, 24, 0.774)), url('./images/aveedibya-dey-wRyQocoKOBA-unsplash.jpg');
-    height: 100vh;
+    background: linear-gradient(to top, rgba(77, 0, 170, 0.534), rgba(233, 149, 24, 0.548)), url('./images/aveedibya-dey-wRyQocoKOBA-unsplash.jpg');
+    height: 268vh;
     background-position: center;
     background-size: cover;
     padding: 0.5rem calc((100vw - 1200px)/2);
     padding-top: 2rem;
+    padding-bottom: 2rem;
     display: block;
     justify-content: flex-start;
     align-items: center;
@@ -767,6 +793,7 @@ hr {
     letter-spacing: 2px;
     font-family: 'Courgette';
     font-weight: 100;
+    font-size: 3rem;
 }
 
 .about-wrapper {
@@ -791,8 +818,7 @@ hr {
 
 /* .about-text {
     /* scroll-snap-type: y proximity; */
-      
- */
+
 
 .about-text h1 {
     position: relative;
@@ -811,6 +837,7 @@ hr {
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 15px;
+    outline: invert;
     /* scroll-snap-align: start; */
 }
 
@@ -820,10 +847,12 @@ hr {
     overflow-x: hidden;
     text-indent: 10px;
     align-items: center;
+    text-align: center;
 }
 
 .img-container img {
     height: 281px;
+    border-radius: 4px;
 }
 
 .line {
@@ -844,7 +873,6 @@ hr {
     .img-container img {
         height: 300px;
         margin-bottom: 1rem;
-        margin: auto;
     }
     .img-container {
         display: block;
