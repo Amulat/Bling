@@ -63,9 +63,14 @@ form.addEventListener("submit", function (e) {
 });
 
 function DisplayPrice() {
-  var price = Cookies.get('name')
-  document. querySelector("price_price").innerHTML = `$${price}`;
+  const price = Cookies.get('name');
+
+  document.getElementById("price_price").innerHTML = `$${price}`;
 }
+
+document.getElementById("price_price").innerHTML = `$${'a'}`;
+
+
 
 //Animations
 gsap.registerPlugin(ScrollTrigger)

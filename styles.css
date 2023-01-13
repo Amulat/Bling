@@ -179,7 +179,7 @@ body {
 
 .hero {
     background: linear-gradient(to right, rgba(77, 0, 170, 0.658), rgba(233, 202, 24, 0.774)), url('./images/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg');
-    height: 100vh;
+    height: 80vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -230,14 +230,19 @@ body {
 }
 
 .button:hover {
-    background: rgba(20, 0, 90, 0.6);
+    background: rgba(20, 0, 90, 0.9);
     color: white;
+    outline: auto;
 }
 
 @media screen and (max-width: 768px) {
     .hero__content h1 {
-        font-size: 4rem;
+        font-size: 3rem;
         margin-bottom: 1rem;
+    }
+    .hero__content p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -512,7 +517,7 @@ body {
 
   .booking-container {
     padding: 10%;
-    background: rgba(120, 62, 255, 0.95);
+    background: rgba(0, 26, 97, 0.95);
     margin-top: 10%;
     margin-bottom: 10%;
     box-shadow: 20px 20px 20px 20px rgba(0,0,0,.3);
@@ -615,7 +620,10 @@ hr {
     width: 100%;
     margin-right: 2rem;
     text-align: right;
+}
 
+.continue-btn:hover {
+    outline: auto;
 }
 
 .formbtn {
@@ -843,7 +851,7 @@ hr {
 
 .img-container {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     overflow-x: hidden;
     text-indent: 10px;
     align-items: center;
