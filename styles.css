@@ -523,8 +523,6 @@ body {
     box-shadow: 20px 20px 20px 20px rgba(0,0,0,.3);
     border-radius: 10px;
     outline: auto;
-    outline-color: yellow;
-    border: yellow;
 }
 
 .input-group {
