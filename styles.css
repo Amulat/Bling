@@ -770,7 +770,7 @@ hr {
 
 .about {
     background: linear-gradient(to top, rgba(77, 0, 170, 0.534), rgba(233, 149, 24, 0.548)), url('./images/aveedibya-dey-wRyQocoKOBA-unsplash.jpg');
-    height: 268vh;
+    height: 230vh;
     background-position: center;
     background-size: cover;
     padding: 0.5rem calc((100vw - 1200px)/2);
@@ -803,12 +803,12 @@ hr {
 }
 
 .about-wrapper {
-    padding: 1%;
     border-radius: 10px;
     /* background: var(--a); */
     background: #f2f2f2ff;
-    height: 97%;
+    height: 99%;
     position: relative;
+    box-shadow: 5px 5px 5px 2px rgba(0,0,0,.3);
 }
 
 .about-title :nth-child(2){
