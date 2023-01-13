@@ -31,47 +31,6 @@ function updatePrice() {
     }
 }
 
-
-
-//Booking form
-function calculateTotalCost() {
-    // Get the check-in and check-out dates from the form
-
-    const form = document.getElementById("myForm");
-
-    const checkInInput = checkIn.value;
-    const checkOutInput = checkOut.value;
-
-    const checkInDate = new Date(checkInInput);
-    const checkOutDate = new Date(checkOutInput);
-    
-
-    const diff = Math.abs(checkInDate.getTime() - checkOutDate.getTime());  // Calculate the difference in milliseconds
-    const nights = Math.ceil(diff / (1000 * 60 * 60 * 24));  // Convert the difference to days and round up
-    const totalCost = cost * nights; //nights;  // Calculate the total cost
-
-    window.costtotal = totalCost
-
-    document.getElementById("total-cost").innerHTML = `$${totalCost}`;
-}
-
-//cookies
-
-const form = document.getElementById("myForm");
-form.addEventListener("submit", function (e) {
-  Cookies.set('name', costtotal);
-});
-
-function DisplayPrice() {
-  const price = Cookies.get('name');
-
-  document.getElementById("price_price").innerHTML = `$${price}`;
-}
-
-document.getElementById("price_price").innerHTML = `$${'a'}`;
-
-
-
 //Animations
 gsap.registerPlugin(ScrollTrigger)
 
@@ -122,3 +81,43 @@ gsap.from('.animate-amenities', {
   x: 150,
   stagger: 0.48
 })
+
+
+//Booking form
+function calculateTotalCost() {
+    // Get the check-in and check-out dates from the form
+
+    const form = document.getElementById("myForm");
+
+    const checkInInput = checkIn.value;
+    const checkOutInput = checkOut.value;
+
+    const checkInDate = new Date(checkInInput);
+    const checkOutDate = new Date(checkOutInput);
+    
+
+    const diff = Math.abs(checkInDate.getTime() - checkOutDate.getTime());  // Calculate the difference in milliseconds
+    const nights = Math.ceil(diff / (1000 * 60 * 60 * 24));  // Convert the difference to days and round up
+    const totalCost = cost * nights; //nights;  // Calculate the total cost
+
+    window.costtotal = totalCost
+
+    document.getElementById("total-cost").innerHTML = `$${totalCost}`;
+}
+
+//cookies
+
+const form = document.getElementById("myForm");
+form.addEventListener("submit", function (e) {
+  Cookies.set('name', costtotal);
+});
+
+function DisplayPrice() {
+  const price = Cookies.get('name');
+
+  document.getElementById("price_price").innerHTML = `$${price}`;
+}
+
+document.getElementById("price_price").innerHTML = `$${'a'}`;
+
+
