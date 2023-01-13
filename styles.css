@@ -658,9 +658,12 @@ hr {
         max-width: 1rem;
         position: relative;
         bottom: 45px;
-        left: 2rem;
+        left: -9.8rem;
         display: flex;
         flex-direction: column;
+    }
+    .form-btn {
+        margin-bottom: 5rem;
     }
   }
 
