@@ -10,7 +10,7 @@
     --a: linear-gradient(to bottom, rgb(94, 9, 3), rgb(10, 57, 85));
     --tsp-a: linear-gradient(to bottom, rgb(94, 9, 3, 0.5), rgb(10, 57, 85 0.5));
     --revs-a: linear-gradient(to bottom, rgb(10, 57, 85), rgb(94, 9, 3));
-    --purpl: linear-gradient(to bottom, rgb(25, 0, 255), rgb(0, 0, 0));
+    --purpl: linear-gradient(to bottom, rgb(25, 0, 71), rgb(0, 0, 0));
 }
 
 *{
@@ -185,7 +185,7 @@ body {
 }
 
 .hero__content h1 {
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(5rem, 10vw, 5rem);
     text-transform: uppercase;
     margin-bottom: 0.5rem;
     font-family: 'Roboto';
@@ -489,7 +489,7 @@ body {
 
   .booking-container {
     padding: 10%;
-    background: rgb(25, 0, 255);
+    background: rgb(62, 107, 255);
     margin-top: 10%;
     margin-bottom: 10%;
     box-shadow: 20px 20px 20px 20px rgba(0,0,0,.3);
